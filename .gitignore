@@ -1,0 +1,37 @@
+@"
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual env
+env/
+.venv/
+venv/
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data artifacts
+data/processed/
+*.npz
+*_metrics.json
+*_layer_sweep.json
+
+# HuggingFace cache
+.cache/
+**/.cache/
+
+# Logs
+logs/
+*.log
+"@ | Out-File -Encoding utf8 .gitignore

@@ -1,0 +1,16 @@
+# Core
+numpy>=1.24
+tqdm>=4.66
+
+# PyTorch 
+torch>=2.1
+
+# Hugging Face
+transformers>=4.39
+accelerate>=0.27
+
+# ML / Probing
+scikit-learn>=1.3
+
+# Utils
+sentencepiece>=0.1.99
