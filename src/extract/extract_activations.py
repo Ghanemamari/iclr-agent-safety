@@ -37,7 +37,9 @@ def extract_features(
 
     # label mapping
     label_to_y = {"benign": 0, "injected": 1}
-    y = np.array([label_to_y[l] for l in labels], dtype=np.int64)
+    #y = np.array([label_to_y[l] for l in labels], dtype=np.int64)
+
+    y = np.array([normalize_label(l) for l in labels], dtype=np.int64)
 
     # figure out layer count
     num_layers = model.config.num_hidden_layers
@@ -81,6 +83,22 @@ def extract_features(
     )
 
     print(f"Saved features: {out_npz} | X={X.shape}, y={y.shape}, layers={selected_layers}")
+
+
+
+def normalize_label(l):
+    """Accepts int labels (0/1) or string labels ('benign'/'malicious')."""
+    if isinstance(l, (int, float)):
+        return int(l)
+
+    if isinstance(l, str):
+        s = l.strip().lower()
+        if s in ["benign", "safe", "clean", "0"]:
+            return 0
+        if s in ["malicious", "unsafe", "injected", "1"]:
+            return 1
+
+    raise ValueError(f"Unknown label format: {l} ({type(l)})")
 
 if __name__ == "__main__":
     import argparse

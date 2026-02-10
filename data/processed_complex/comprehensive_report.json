@@ -1,0 +1,36 @@
+{
+  "semantic": {
+    "semantic_auc_mean": 1.0,
+    "semantic_auc_std": 0.0,
+    "embedding_model": "all-MiniLM-L6-v2"
+  },
+  "statistical": {
+    "ppl_auc": NaN,
+    "nll_auc": NaN,
+    "mean_ppl_benign": 115.889404900074,
+    "mean_ppl_injected": NaN
+  },
+  "probe_layerwise": [
+    {
+      "layer_idx": 0,
+      "auc": 0.7022222222222222
+    },
+    {
+      "layer_idx": 1,
+      "auc": 0.9816666666666667
+    },
+    {
+      "layer_idx": 2,
+      "auc": 0.9938888888888888
+    },
+    {
+      "layer_idx": 3,
+      "auc": 0.9961111111111111
+    },
+    {
+      "layer_idx": 4,
+      "auc": 0.9958333333333333
+    }
+  ],
+  "probe_final_auc": 0.9958333333333333
+}

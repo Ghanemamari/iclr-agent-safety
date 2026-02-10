@@ -1,0 +1,6 @@
+{
+  "group_cv_auc_mean": 0.9944444444444445,
+  "group_cv_auc_std": 0.011111111111111072,
+  "group_cv_acc_mean": 0.95,
+  "model_name": "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+}
